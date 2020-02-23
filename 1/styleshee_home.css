@@ -3,11 +3,11 @@
     margin: 0;
     padding: 0;
     background-color: #24252A;
+    
 }
 
-li,
-a,
-button {
+
+li,a,button {
     font-family: san-serif;
     font-weight: 500;
     font-size: 17px;
@@ -74,21 +74,21 @@ button:hover {
 
 /* Animation */
 
-#Animation {
-    margin: 0 auto;
-    background-image: url(images/video_background.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
+
+#images_left{
+    width: 25.8%;
+}
+#images_right{
+    width: 26.4%;
+    float: right;
+
 }
 
 #video {
-    width: 700px;
-    height: 400px;
-    display: block;
-    margin-right: 30px;
-    background-image: url(images/video_background.jpg);
-    background-size: auto;
-    padding-left: 20px;
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    height: 60%;
 }
 
 
@@ -132,3 +132,43 @@ button:hover {
 .forms {
     color: white;
 }
+
+/*news*/
+#Inventory{
+    padding-top: 40px;
+
+}
+
+#I_title{
+    font-size: 18px;
+    color: white;
+    font-style: italic;
+    font-family: Helvetica;
+}
+#news{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.im{
+    width: 100%;
+    
+}
+/*social*/
+#Social_Media{
+    padding-top: 20px;
+}
+
+#social{
+    display: flex;
+    list-style-type: none; 
+    margin-left: 50px;
+
+}
+.ims{
+    width: 50px;
+    height: 50px;
+}
+
