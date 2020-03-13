@@ -105,14 +105,12 @@ button:hover {
     margin-top: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
-
 }
 
 .center {
     margin: auto;
     width: 50%;
-    text-align:center;
-    
+    text-align: center;
 }
 
 .dropdown {
