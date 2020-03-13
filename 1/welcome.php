@@ -25,15 +25,8 @@ if (isset($_POST['abandon'])) {
 <html>
 
 <body>
-
-
-
-
     <?php
-
     echo "Welcome " . $_SESSION['email'];
-
-    
     ?>
     <form method="post" class="formLayout">
         <div class="formGroup">
