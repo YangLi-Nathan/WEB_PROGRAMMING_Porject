@@ -1,24 +1,19 @@
 <?php 
 session_start();
-
 # redirect back to login page
 if (!isset($_SESSION['email'])) {
     header("location: login.php");
     exit;
 }
-
 if (!isset($_SESSION['password'])) {
     header("location: login.php");
     exit;
 }
-
 if (isset($_POST['abandon'])) {
     session_unset();
     header("location: login.php");
     exit;
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -38,14 +33,3 @@ if (isset($_POST['abandon'])) {
 </body>
 
 </html>
-
-
-
-<!-- 
-// Echo session variables that were set on previous page
-    echo "Favorite color is " . $_SESSION["email"] . ".<br>";
-    echo "Favorite animal is " . $_SESSION["password"] . ".";
-    echo "++++++++++++++ " . $_SESSION["rememberMe"] . ".";
-// count down
-// welcome
--->
