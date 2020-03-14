@@ -1,35 +1,46 @@
+<?php
+session_start();
+    if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
+    $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $location);
+    exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Login Page</title>
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="stylesheet_signup.css" />
+
 </head>
 
 <body>
 
-    <table>
-        <form method="POST" action="validate.php">
-            <tr>
-                <th>Email</th>
-                <td><input type="text" name="email"></td>
-            </tr>
+    <div class="user">
+        <header class="user__header">
+            <img class="logo" src="images/logo1-removebg-preview.png" atl=""></a>
+            <br>
 
-            <tr>
-                <th>First Name</th>
-                <td><input type="text" name="fname"></td>
-            </tr>
+            <h1 class="user__title">Sign up with E-mail</h1>
+        </header>
 
-            <tr>
-                <th>Last Name</th>
-                <td><input type="text" name="lname"></td>
-            </tr>
+        <form class="form" method="POST" action="validation.php">
 
-            <tr>
-                <th>Password</th>
-                <td><input type="password" name="password"></td>
-            </tr>
+            <div class="form__group">
+                <input type="email" placeholder="E-mail" maxlength="30" class="form__input" name="email"
+                    value="<?php echo htmlspecialchars($email) ?>" required />
+            </div>
+
+            <div class="form__group">
+                <input type="password" placeholder="Password" minlength="5" class="form__input" name="password"
+                    value="<?php echo htmlspecialchars($password) ?>" required />
+            </div>
+
+            <button class="btn" type="submit" value="signup" name="signup">Register</button>
         </form>
-    </table>
+    </div>
 
 </body>
 

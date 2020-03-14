@@ -1,11 +1,21 @@
 <?php 
 if(isset($_POST['admin_login'])){
     $myemail="admin@admin.com";
-    $mypass="1234";
+    $mypass="12345";
     session_start();
     $_SESSION['email']=$myemail;
     $_SESSION['password']=$mypass;
     header("location: welcome.php");
+// signup - we will modify this once we have database setup
+}elseif(isset($_POST['signup'])){
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    session_start();
+    $_SESSION['email']=$email;
+    $_SESSION['password']=$password;
+    header("location: welcome.php");
+
 }else{
     if(isset($_POST['login'])){
         $email = $_POST['email'];
@@ -14,7 +24,6 @@ if(isset($_POST['admin_login'])){
         $_SESSION['email']=$email;
         $_SESSION['password']=$password;
         header("location: welcome.php");
-    
         if(isset($_POST['rememberMe']))
         {
             $cookie_email=$email;
@@ -24,4 +33,6 @@ if(isset($_POST['admin_login'])){
         header("location: login.php");
     }
 }
+
+
 ?>

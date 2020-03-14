@@ -21,7 +21,7 @@ session_start();
         <form method="post" class="formLayout" action="validation.php" autocomplete="on">
             <div class="formGroup">
                 <label>User Name(E-mail Address):</label>
-                <input type="text" name="email" placeholder="E-mail" title="email" id='email'
+                <input type="email" name="email" placeholder="E-mail" title="email" id='email'
                     value="<?php echo $email ?>" required autofocus /><br>
             </div>
             <div class="formGroup">
