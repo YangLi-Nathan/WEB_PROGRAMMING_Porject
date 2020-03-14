@@ -30,7 +30,17 @@ session_start();
 
             <div class="form__group">
                 <input type="email" placeholder="E-mail" maxlength="30" class="form__input" name="email"
-                    value="<?php echo htmlspecialchars($email) ?>" required />
+                    value="<?php echo htmlspecialchars($email) ?>" required autofocus />
+            </div>
+
+            <div class="form__group">
+                <input type="text" name="fname" class="form__input" required placeholder="First Name" maxlength="20"
+                    pattern="[A-Za-z'-]{2,20}" value="<?php echo htmlspecialchars($fname); ?>">
+            </div>
+
+            <div class="form__group">
+                <input type="text" name="lname" class="form__input" required placeholder="Last Name" maxlength="20"
+                    pattern="[A-Za-z'-]{2,20}" value="<?php echo htmlspecialchars($lname); ?>">
             </div>
 
             <div class="form__group">
