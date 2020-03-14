@@ -36,8 +36,14 @@ session_start();
 
             <div class="formGroup">
                 <label> </label>
-                <button type="submit">======Pass Button=====(not complete yet)</button>
-                <input type="submit" value="Login" name="login">
+                <div>
+                    <input type="submit" value="Login" name="login"><br>
+
+
+                    <button type="submit" value="admin_login" name="admin_login" formnovalidate>Admin Pass
+                        Button</button>
+
+                </div>
             </div>
 
             <!-- PASS WIHTOUHT LOGIN BUTTON and SIGNUP LINK
