@@ -18,12 +18,60 @@ if (isset($_POST['abandon'])) {
 
 <!DOCTYPE html>
 <html>
+<style>
+  *{
+    background-color: darkgrey;
+  }
+#welcome{
+  font-size: 40px;
+  padding-top: 100px;
+  font-family: sans-serif;
+ font-style: italic;
+ font-weight: bold;
+ text-align: center;
+
+}
+#countDowntimer{
+  font-size: 40px;
+  padding-top: 100px;
+  font-family: sans-serif;
+ font-style: italic;
+ font-weight: bold;
+ text-align: center;
+}
+button{
+  font-family: "Titillium Web", sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .1em;
+  outline: 0;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  margin: auto;
+  padding: auto;
+  color: grey;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  font-size: 25px;
+  padding-top: 20px;
+  color: black;
+
+
+}
+
+
+  </style>
+
+
 
 <body>
-
+<div id="welcome">
     <?php
-    echo "Welcome " . $_SESSION['email'];
+    echo "Welcome: " . $_SESSION['email'];
     ?>
+  </div>
     <p id="countDowntimer"></p>
 
     <form method="post" class="formLayout">
