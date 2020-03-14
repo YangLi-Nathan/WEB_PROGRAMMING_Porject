@@ -38,23 +38,10 @@ session_start();
                 <label> </label>
                 <div>
                     <input type="submit" value="Login" name="login"><br>
-
-
-                    <button type="submit" value="admin_login" name="admin_login" formnovalidate>Admin Pass
-                        Button</button>
-
+                    <button type="submit" value="admin_login" name="admin_login" formnovalidate>
+                        Admin Pass Button</button>
                 </div>
             </div>
-
-            <!-- PASS WIHTOUHT LOGIN BUTTON and SIGNUP LINK
-            <div class="formGroup">
-                <label></label>
-                <button type="submit" formnovalidate>Login without HTML5 validation</button>
-            </div>
-            <div class="vertGap55 centerText">
-                <a href="signup.php">Not have an Account? Sign Up Here</a>
-            </div>
-            -->
         </form>
     </div>
 </body>

@@ -53,7 +53,7 @@ header {
     display: inline-block;
 }
 
-.nav_bar:hover {
+.nav_bars:hover {
     color: #87CEFC;
 }
 
@@ -70,27 +70,96 @@ button:hover {
     background-color: rgba(0, 136, 169, 0.8);
 }
 
+@media (max-width:1000px){
+    #nav_bar5{
+        display: none;
+    }
+}
+@media (max-width:830px){
+    #nav_bar4{
+        display: none;
+    }
+}
+@media (max-width:700px){
+    #nav_bar3{
+        display: none;
+    }
+}
+@media (max-width:550px){
+    #nav_bar2{
+        display: none;
+    }
+}
+@media (max-width:400px){
+    .nav_bars{
+        justify-content: center;
+    }
+}
 
-/* Animation */
 
 #images_left {
     width: 25.8%;
+    height: 60%;
 }
 
 #images_right {
     width: 26.4%;
-    float: right;
+    float:right;
 }
 
 #video {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 60%;
+    width: 60%;
+
 }
 
 
-/*Search*/
+@media(max-width:1000px){
+    #video{
+        height: 43%;
+        width: auto;
+    }
+}
+@media(max-width:850px){
+    #video{
+        height: 35%;
+        width: auto;
+    }
+}
+@media(max-width:700px){
+    #video{
+        height: 24.5%;
+        width: auto;
+       
+    }
+}
+@media(max-width:500px){
+    #video{
+        height: 20.5%;
+        width: auto;
+       
+    }
+}
+@media(max-height:700px){
+    #video{
+        
+        width: 62%;
+        height: auto;
+       
+    }
+}
+@media(max-height:500px){
+    #video{
+        
+        width: 62%;
+        height: auto;
+       
+    }
+}
+
+
 
 #Search_Section {
     border-style: none;
@@ -187,6 +256,23 @@ button:hover {
     width: 100%;
 }
 
+@media(max-width:700px){
+    #im1{
+        display: none;
+    }
+
+}
+@media(max-width:900px){
+    #im2{
+        display: none;
+    }
+
+}
+
+
+
+
+
 
 /*social*/
 
@@ -233,3 +319,27 @@ button:hover {
     background: #bb0000;
     color: white;
 }
+
+@media(max-width:800px){
+    #sm1{
+        display: none;
+    }
+}
+@media(max-width:800px){
+    #sm2{
+        display: none;
+    }
+}
+@media(max-width:600px){
+    #sm3{
+        display: none;
+    }
+}
+@media(max-width:400px){
+    #sm4{
+        display: none;
+    }
+}
+
+
+
