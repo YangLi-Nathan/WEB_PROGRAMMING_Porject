@@ -22,7 +22,6 @@ session_start();
         <header class="user__header">
             <img class="logo" src="images/logo1-removebg-preview.png" atl=""></a>
             <br>
-
             <h1 class="user__title">Sign up with E-mail</h1>
         </header>
 
