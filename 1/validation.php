@@ -5,7 +5,7 @@ if(isset($_POST['admin_login'])){
     session_start();
     $_SESSION['email']=$myemail;
     $_SESSION['password']=$mypass;
-    header("location: welcome.php");
+    header("location: home.php");
 // signup - we will modify this once we have database setup
 }elseif(isset($_POST['signup'])){
     $email = $_POST['email'];
@@ -13,7 +13,7 @@ if(isset($_POST['admin_login'])){
     session_start();
     $_SESSION['email']=$email;
     $_SESSION['password']=$password;
-    header("location: welcome.php");
+    header("location: home.php");
 }else{
     if(isset($_POST['login'])){
         $email = $_POST['email'];
@@ -21,7 +21,7 @@ if(isset($_POST['admin_login'])){
         session_start();
         $_SESSION['email']=$email;
         $_SESSION['password']=$password;
-        header("location: welcome.php");
+        header("location: home.php");
         if(isset($_POST['rememberMe']))
         {
             $cookie_email=$email;
