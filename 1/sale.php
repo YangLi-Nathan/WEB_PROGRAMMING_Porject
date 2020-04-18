@@ -1,4 +1,4 @@
-<?php 
+ <?php 
 session_start();
 # display login and signup button, else display username and logout button + counter timer
 if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
@@ -23,69 +23,71 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
 <html>
 
 <head>
-    <title>Contact Us</title>
+   
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="countdownTimer.js"></script>
     <link rel="stylesheet" href="styleshee_home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title></title>
+    <title>For Sale</title>
 </head>
 <style>
-
-
-  #contact{
-   margin-top: 10%;
-
-  }
-
-#title{
- text-align: center;
-  color: white;
-  font-size: 22px;
-
-
-}
-.sub-title{
-padding-left: 30%;
-  color: white;
-  font-size: 18px;
-  font-family: Comic Sans MS;
-
-
-}
-#content{
-  color: white;
-  font-size: 16px;
-  padding-left: 30%;
-  font-family: Comic Sans MS;
-
-}
-
-
-
-  </style>
-
-<body>
-
-
-    <body>
-        <div id="main">
+        * {
+            background-color: #24252A;
+        }
+        
+       /*  #countDowntimer {
+            font-size: 40px;
+            padding-top: 100px;
+            font-family: sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+        } */
+        
+        button {
+            font-weight: bold;
+            letter-spacing: .1em;
+            outline: 0;
+            background: transparent;
+            width: 100%;
+            border: 0;
+            transition: all 0.3 ease;
+            cursor: pointer;
+            font-size: 25px;
+            padding-top: 20px;
+            font-family: san-serif;
+            font-weight: 500;
+            font-size: 17px;
+            color: #edf0f1;
+            text-decoration: none;
+        }
+        
+        #notice {
+            font-size: 30px;
+            padding-top: 100px;
+            font-family: sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            color: aliceblue;
+        }
+    </style>
+  <div id="main">
             <!--  Header Section -->
             <header>
 
                 <nav>
                     <ul class="nav_bars">
-                       <li><a id="nav_bar1" href="home.php">Home Page</a></li>
+                      <li><a id="nav_bar1" href="home.php">Home Page</a></li>
                         <li><a id="nav_bar2" href="sale.php">Car for Sale</a></li>
+                        
                         <li><a id="nav_bar3" href="sell.php">Sell your car</a></li>
                         <li><a id="nav_bar4" href="service.php">Maintenance Tips</a></li>
-                        <li><a id="nav_bar5" href=contact.php>Contact Us</a></li>
-                        
+                        <li><a id="nav_bar5" href="contact.php">Contact Us</a></li>
                     </ul>
                 </nav>
             </header>
-
-
+            
             <!-- signup & login in -->
             <a class="sign_up" href="signup.php"><button>Sign up</button></a>
 
@@ -98,37 +100,22 @@ padding-left: 30%;
 
             <a class="logout" href="logout.php"><button>Logout</button></a>
         </div>
-<div id="contact">
 
-        <br><p id='title'> CUSTOMER SERVICE</p><br>
-        <hr style="width: 50%; margin:auto;"><br>
-        <p class="sub-title"> Email:</h4><br><br>
+<p id="notice">This part of our website is under construction.<br><br><br> It will be avalible once our database is setup. <br><br><br>Stay Tuned!</p>
 
-       
-  <p id="content"> 
-  SalesCar@gmail.com<br><br>
-*Response will return within one business day</p><br>
-<hr style="width: 50%; margin:auto;"><br>
-</div>
-<p class="sub-title"> Telephone:</h4><br><br>
-  <p id="content"> 
-  (404)-xxx-xxxx<br><br>
-Monday to Friday from 8.30 am to 7.30 pm (EST)<br>
-Saturday from 10:00 am to 4:00 pm (EST)</p><br>
 
-<hr style="width: 50%; margin:auto;"><br>
-        <p class="sub-title"> Interested to Join In?</h4><br><br>
-          <p id="content"> 
-  Welcome and send your resume to SalesGroup@gmail.com<br><br><br></p>
+    <br>
+
+    <br><br><br>
 
 
 
 
 
-
+    <a class="dropbtn" href="home.php"><button>Back to Home Page</button></a>
 
         <!--  Social Media Section -->
-        <div id="Social_Media">
+        <div  id="Social_Media">
             <div class="center">
                 <a id="sm1" href="https://www.facebook.com" class="fa fa-facebook"></a>
                 <a id="sm2" href="https://www.twitter.com" class="fa fa-twitter"></a>

@@ -28,6 +28,7 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
     <script src="countdownTimer.js"></script>
     <link rel="stylesheet" href="styleshee_home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
 </head>
 
 <body>
@@ -39,11 +40,11 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
 
                 <nav>
                     <ul class="nav_bars">
-                        <li><a id="nav_bar1" href="#">Car for Sale</a></li>
-                        <li><a id="nav_bar2" href="#">Sell your car</a></li>
-                        <li><a id="nav_bar3" href="#">Service and Repair</a></li>
-                        <li><a id="nav_bar4" href=research.html>Research</a></li>
-                        <li><a id="nav_bar5" href="#">Contact Us</a></li>
+                        <li><a id="nav_bar1" href=home.php>Home</a></li>
+                        <li><a id="nav_bar2" href="sale.php">Car for Sale</a></li>
+                        <li><a id="nav_bar3" href="sell.php">Sell your car</a></li>
+                        <li><a id="nav_bar4" href="service.php">Maintenance Tips</a></li>
+                        <li><a id="nav_bar5" href="contact.php">Contact Us</a></li>
                     </ul>
                 </nav>
             </header>
@@ -81,8 +82,8 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
                         <i class="caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">New</a>
-                        <a href="#">Used</a>
+                        <a href="comingsoon.html">New</a>
+                        <a href="comingsoon.html">Used</a>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -90,10 +91,10 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
                         <i class="caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">BMW</a>
-                        <a href="#">Mercedes-Benz</a>
-                        <a href="#">Toyota</a>
-                        <a href="#">Audi</a>
+                        <a href="comingsoon.html">BMW</a>
+                        <a href="comingsoon.html">Mercedes-Benz</a>
+                        <a href="comingsoon.html">Toyota</a>
+                        <a href="comingsoon.html">Audi</a>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -101,10 +102,10 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
                         <i class="caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">BMW</a>
-                        <a href="#">Mercedes-Benz</a>
-                        <a href="#">Toyota</a>
-                        <a href="#">Audi</a>
+                        <a href="comingsoon.html">BMW</a>
+                        <a href="comingsoon.html">Mercedes-Benz</a>
+                        <a href="comingsoon.html">Toyota</a>
+                        <a href="comingsoon.html">Audi</a>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -112,10 +113,10 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
                         <i class="caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">$10000.00</a>
-                        <a href="#">$20000.00</a>
-                        <a href="#">$30000.00</a>
-                        <a href="#">$40000.00</a>
+                        <a href="comingsoon.html">$10000.00</a>
+                        <a href="comingsoon.html">$20000.00</a>
+                        <a href="comingsoon.html">$30000.00</a>
+                        <a href="comingsoon.html">$40000.00</a>
                     </div>
                 </div>
 
@@ -125,16 +126,16 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
                         <i class="caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">10000</a>
-                        <a href="#">20000</a>
-                        <a href="#">30000</a>
-                        <a href="#">40000</a>
+                        <a href="comingsoon.html">10000</a>
+                        <a href="comingsoon.html">20000</a>
+                        <a href="comingsoon.html">30000</a>
+                        <a href="comingsoon.html">40000</a>
                     </div>
                 </div>
 
 
                 <div class="dropdown">
-                    <button class="dropbtn">Search
+                    <button class=" dropbtn" onclick="comingsoon.html">Search
                         <i class="caret-down"></i>
                     </button>
                 </div>
@@ -154,19 +155,14 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
                 <li><img class="im" id="im1" src="images/l1.jpg" onmouseover="this.src='images/l11.jpg';"
                         onmouseout="this.src='images/l1.jpg';" atl="gmc"></li>
 
-
-
                 <li><img class="im" id="im2" src="images/l2.jpg" atl="gmc" onmouseover="this.src='images/l22.jpg';"
                         onmouseout="this.src='images/l2.jpg';"></li>
-
 
                 <li><img class="im" id="im3" src="images/l3.jpg" atl="gmc" onmouseover="this.src='images/l33.jpg';"
                         onmouseout="this.src='images/l3.jpg';"></li>
 
-
                 <li><img class="im" id="im4" src="images/l4.jpg" atl="gmc" onmouseover="this.src='images/l44.jpg';"
                         onmouseout="this.src='images/l4.jpg';"></li>
-
 
                 <li><img class="im" id="im4" src="images/l5.jpg" atl="gmc" onmouseover="this.src='images/l55.jpg';"
                         onmouseout="this.src='images/l5.jpg';"></li>
