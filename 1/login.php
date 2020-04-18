@@ -25,7 +25,7 @@
         <div class="form">
 
             <form method="post" action="validation.php" autocomplete="on">
-                <input type="text" name="email" placeholder="&#xf007;  username" title="email" id='email'
+                <input type="email" name="email" placeholder="&#xf007;  username" title="email" id='email'
                     value="<?php echo $email ?>" required autofocus />
                 <input type="password" name="password" placeholder="&#xf023;  password" title="password"
                     value="<?php echo $password ?>" required />

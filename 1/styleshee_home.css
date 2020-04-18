@@ -356,3 +356,36 @@ button:hover {
         display: none;
     }
 }
+
+
+/* rolling*/
+
+#news {
+    list-style: none;
+}
+
+#rolling {
+    width: 750px;
+    height: 170px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+#news {
+    width: 200%;
+    animation: picmove 12s linear infinite forwards;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes picmove {
+    from {
+        transform: translate(-0);
+    }
+    to {
+        transform: translate(-800px);
+    }
+}
+
+#news:hover {
+    animation-play-state: paused;
+}

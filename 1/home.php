@@ -28,7 +28,6 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
     <script src="countdownTimer.js"></script>
     <link rel="stylesheet" href="styleshee_home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title></title>
 </head>
 
 <body>
@@ -152,10 +151,25 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
             </h4>
             <hr><br>
             <ul id="news">
-                <li><img class="im" id="im1" src="images/acura.png" atl="acura"></li>
-                <li><img class="im" id="im2" src="images/audi.png" alt="audi"></li>
-                <li><img class="im" id="im3" src="images/bmw.png" atl="bmw"></li>
-                <li><img class="im" id="im4"=src="images/gmc.png" atl="gmc"></li>
+                <li><img class="im" id="im1" src="images/l1.jpg" onmouseover="this.src='images/l11.jpg';"
+                        onmouseout="this.src='images/l1.jpg';" atl="gmc"></li>
+
+
+
+                <li><img class="im" id="im2" src="images/l2.jpg" atl="gmc" onmouseover="this.src='images/l22.jpg';"
+                        onmouseout="this.src='images/l2.jpg';"></li>
+
+
+                <li><img class="im" id="im3" src="images/l3.jpg" atl="gmc" onmouseover="this.src='images/l33.jpg';"
+                        onmouseout="this.src='images/l3.jpg';"></li>
+
+
+                <li><img class="im" id="im4" src="images/l4.jpg" atl="gmc" onmouseover="this.src='images/l44.jpg';"
+                        onmouseout="this.src='images/l4.jpg';"></li>
+
+
+                <li><img class="im" id="im4" src="images/l5.jpg" atl="gmc" onmouseover="this.src='images/l55.jpg';"
+                        onmouseout="this.src='images/l5.jpg';"></li>
             </ul>
         </div>
 
