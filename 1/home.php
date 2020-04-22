@@ -77,67 +77,59 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
         <!--  Search Section -->
         <div id="Search_Section">
             <div class="center">
-                <div class="dropdown">
-                    <button class="dropbtn">New & Used Cars
-                        <i class="caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="comingsoon.html">New</a>
-                        <a href="comingsoon.html">Used</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Make
-                        <i class="caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="comingsoon.html">BMW</a>
-                        <a href="comingsoon.html">Mercedes-Benz</a>
-                        <a href="comingsoon.html">Toyota</a>
-                        <a href="comingsoon.html">Audi</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">Models
-                        <i class="caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="comingsoon.html">BMW</a>
-                        <a href="comingsoon.html">Mercedes-Benz</a>
-                        <a href="comingsoon.html">Toyota</a>
-                        <a href="comingsoon.html">Audi</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropbtn">No Max Price
-                        <i class="caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="comingsoon.html">$10000.00</a>
-                        <a href="comingsoon.html">$20000.00</a>
-                        <a href="comingsoon.html">$30000.00</a>
-                        <a href="comingsoon.html">$40000.00</a>
-                    </div>
-                </div>
 
+    <form method="post" action="sell.php" autocomplete="on" class="formLayout"  enctype="multipart/form-data">
+    <label>Car Type</label>
+          <select id="type" name="cars">
+            <option value="used">Used</option>
+            <option value="new">New</option>
+          </select>
 
-                <div class="dropdown">
-                    <button class="dropbtn">Mileage
-                        <i class="caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="comingsoon.html">10000</a>
-                        <a href="comingsoon.html">20000</a>
-                        <a href="comingsoon.html">30000</a>
-                        <a href="comingsoon.html">40000</a>
-                    </div>
-                </div>
+    <label>Year</label>
+          <select id="type" name="year">
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="older_2014">Older than 2016</option>
+        
+          </select>
 
+ 
 
-                <div class="dropdown">
-                    <button class=" dropbtn" onclick="comingsoon.html">Search
-                        <i class="caret-down"></i>
-                    </button>
+<label>Model </label>
+    <select name="Model" >
+
+  <option value="BMW i8">BMW i8</option>
+  <option value="BMW_m8">BMW M8</option>
+  <option value="BMW_M850">BMW m850</option>
+  <option value="Mercedes ">Mercedes Maybach</option>
+  <option value="Audi_a8">Audi A8</option>
+  <option value="Audi_r8">Audi R8</option>
+  <option value="Bentley Continental GT">Bentley Continental GT</option>
+  <option value="Alfa Romeo 4C">Alfa Romeo 4C</option>
+  <option value="Chevrolet Chevrolet">Chevrolet Chevrolet</option>
+  <option value="Aston Martin DB11">Aston Martin DB11</option>
+  <option value="Aston Martin DBS">Aston Martin DBS</option>
+  
+</select>
+
+<label>Mileage Range </label>
+    <select name="mileage">
+
+  <option value="10000"> less than 10,000</option>
+  <option value="30000">10,000-30,000</option>
+  <option value="50000">30,000-50,000</option>
+  <option value="100000">50,000-100,000</option>
+  
+</select>
+
+<label>Price Limit: </label>
+  <input style="border-color: white;" type="text" name="Price" class="textbox" required step='0.01' pattern="[0-9]+([,\.][0-9]+)?"/>
+
+  <input id="submit" type="submit" name="submit" value="SEARCH">
+                
+                  
                 </div>
 
 

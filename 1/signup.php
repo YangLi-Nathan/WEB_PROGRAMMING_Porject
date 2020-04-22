@@ -25,7 +25,7 @@ session_start();
             <h1 class="user__title">Sign up with E-mail</h1>
         </header>
 
-        <form class="form" method="POST" action="validation.php">
+        <form class="form" method="POST" action="registration.php">
 
             <div class="form__group">
                 <input type="email" placeholder="E-mail" maxlength="30" class="form__input" name="email"

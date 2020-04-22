@@ -29,6 +29,8 @@
                     value="<?php echo $email ?>" required autofocus />
                 <input type="password" name="password" placeholder="&#xf023;  password" title="password"
                     value="<?php echo $password ?>" required />
+
+
                 <li>
                     <label for="checkid" style="word-wrap:break-word; font-size:15px">
                         <input type="checkbox" id="checkid" name="rememberMe" title="rememberMe" value="1" />Remember

@@ -1,34 +1,46 @@
 <?php 
 if(isset($_POST['admin_login'])){
     $myemail="admin@admin.com";
-    $mypass="12345";
+    $mypass="123456789";
     session_start();
     $_SESSION['email']=$myemail;
     $_SESSION['password']=$mypass;
     header("location: home.php");
-// signup - we will modify this once we have database setup
-}elseif(isset($_POST['signup'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    session_start();
-    $_SESSION['email']=$email;
-    $_SESSION['password']=$password;
-    header("location: home.php");
 }else{
     if(isset($_POST['login'])){
+        // check email and password
         $email = $_POST['email'];
         $password = $_POST['password'];
-        session_start();
-        $_SESSION['email']=$email;
-        $_SESSION['password']=$password;
-        header("location: home.php");
-        if(isset($_POST['rememberMe']))
+
+        // connect to the server and select database
+        $conn = new mysqli("localhost", "yli48", "yli48","yli48");
+
+        // to avoid mysql injection
+        $email = stripslashes($email);
+        $password = stripslashes($password);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+        $sql ="SELECT * from users where email='$email' and password='$password'";
+
+        $result=mysqli_query($conn,$sql);
+
+        $count = mysqli_num_rows($result);
+
+        if($count == 1)
         {
-            $cookie_email=$email;
-            setcookie('cookie_email', $cookie_email, time()+60*60*7);
+        // Register $username, $password and redirect to file "login_success.php"
+        session_start();
+        $_SESSION["email"] = $email;
+        $_SESSION['password']=$password;
+        header("location:home.php");
         }
-    } else{
-        header("location: login.php");
+        else {
+        echo '<script>alert("Username and/or Password incorrect.\\nTry again.")
+        location="signup.php";
+        </script>';
+        
+        }
     }
 }
 ?>

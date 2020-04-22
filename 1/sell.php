@@ -3,6 +3,7 @@ session_start();
 # display login and signup button, else display username and logout button + counter timer
 if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
     $username=$_SESSION['email'];
+    echo $username;
     echo'<style>.sign_up {display:none;}</style>';
     echo'<style>.log_in {display:none;}</style>';
     echo'<style>.logout {display:block;}</style>';
@@ -16,7 +17,55 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
     echo'<style>.username_display {display:none;}</style>';
     echo'<style>#countDowntimer {display:none;}</style>';
  }
+$db = mysqli_connect("localhost", "ygao11", "ygao11", "ygao11");
 
+  // Initialize message variable
+  if ($db->connect_error) {  
+    die("Connection failed: " . $db->connect_error);  
+}
+$status = $statusMsg = ''; 
+if(isset($_POST["submit"])){ 
+    $status = 'error'; 
+
+
+    //1
+    $username=$_SESSION['email'];
+    $cars=$_POST['cars'];
+    $year=$_POST['year'];
+    $model=$_POST['Model'];
+    $mileage=$_POST['mileage'];
+    $price=$_POST['Price'];
+    echo $year;
+    if(!empty($_FILES["image"]["name"])) { 
+        // Get file info 
+        $fileName = basename($_FILES["image"]["name"]); 
+        $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+         
+        // Allow certain file formats 
+        $allowTypes = array('jpg','png','jpeg','gif'); 
+        if(in_array($fileType, $allowTypes)){ 
+            $image = $_FILES['image']['tmp_name']; 
+            $imgContent = addslashes(file_get_contents($image)); 
+         
+            // Insert image content into database 
+            $insert = $db->query("INSERT into images (session_name, cars, year, model, mileage, price, image, uploaded) VALUES ('$username','$cars','$year','$model','$mileage','$price','$imgContent', NOW())"); 
+             
+            if($insert){ 
+                $status = 'success'; 
+                $statusMsg = "File uploaded successfully."; 
+            }else{ 
+                $statusMsg = "File upload failed, please try again."; 
+            }  
+        }else{ 
+            $statusMsg = 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.'; 
+        } 
+    }else{ 
+        $statusMsg = 'Please select an image file to upload.'; 
+    } 
+} 
+ 
+// Display status message 
+echo $statusMsg; 
 
 
 
@@ -66,6 +115,13 @@ input{
     }
 }
 
+#submit{
+  color: white;
+    font-size: 16px;
+    font-family: Comic Sans MS;
+    margin-left: 17%;
+}
+
 
 
 
@@ -105,8 +161,8 @@ input{
 <h3>Tell Us About Your Car</h3><br>
 <div id="form">
 
-    <form method="post" action="" autocomplete="on" class="formLayout">
-    <label>Car type</label>
+    <form method="post" action="sell.php" autocomplete="on" class="formLayout"  enctype="multipart/form-data">
+    <label>Car Type</label>
           <select id="type" name="cars">
             <option value="used">Used</option>
             <option value="new">New</option>
@@ -118,32 +174,25 @@ input{
             <option value="2019">2019</option>
             <option value="2018">2018</option>
             <option value="2017">2017</option>
-            <option value="2016">2016</option>
-            <option value="2015">2015</option>
-            <option value="older_2014">Older than 2014</option>
+            <option value="older_2014">Older than 2016</option>
         
           </select><br><br>
 
  
 
-<label>model </label>
+<label>Model </label>
     <select name="Model" >
-
-  <option value="BMW_X2">BMW X2</option>
   <option value="BMW i8">BMW i8</option>
   <option value="BMW_m8">BMW M8</option>
   <option value="BMW_M850">BMW m850</option>
-  <option value="Mercedes">Mercedes</option>
-  <option value="Audi_a4">Audi A4</option>
-  <option value="Audi_a5">Audi A5</option>
-  <option value="Audi_a6">Audi A6</option>
+  <option value="Mercedes ">Mercedes Maybach</option>
   <option value="Audi_a8">Audi A8</option>
   <option value="Audi_r8">Audi R8</option>
   <option value="Bentley Continental GT">Bentley Continental GT</option>
   <option value="Alfa Romeo 4C">Alfa Romeo 4C</option>
   <option value="Chevrolet Chevrolet">Chevrolet Chevrolet</option>
   <option value="Aston Martin DB11">Aston Martin DB11</option>
-  <option value="Aston Martin DBS">AAston Martin DBS</option>
+  <option value="Aston Martin DBS">Aston Martin DBS</option>
   
 </select><br><br>
 
@@ -158,13 +207,16 @@ input{
 </select><br><br>
 
 <label>Price: </label>
-               <input style="border-color: white;" type="text" name="Price" class="textbox" required step='0.01' pattern="[0-9]+([,\.][0-9]+)?"
-                       /><br><br>
+  <input style="border-color: white;" type="text" name="Price" class="textbox" required step='0.01' pattern="[0-9]+([,\.][0-9]+)?"/><br><br>
+
+<label>Select a Picture of your car:</label>
+    <input type="file" name="image"><br><br>
 
 
 
 
-    <button id="submit" type="submit" name="submit">Confirm </button>
+
+    <input id="submit" type="submit" name="submit" value="Upload">
 </form>
 </div>
 <img src="sell_bac.jpg" atl="log_in"></a>
@@ -173,7 +225,7 @@ input{
 
 
 if(isset($_POST['submit'])){
-  echo "<script>alert('submit successfully, the record will be added to when our database is setup');</script>"; 
+  echo "<script>alert('submit successfully, the record is added to our database');</script>"; 
 }
 
  ?>

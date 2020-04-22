@@ -122,7 +122,7 @@ button:hover {
 
 #images_left {
     width: 25.8%;
-    height: 60%;
+    
 }
 
 #images_right {
@@ -180,6 +180,7 @@ button:hover {
 }
 
 #Search_Section {
+    height: 100px;
     border-style: none;
     padding: 5px;
     overflow: hidden;
@@ -189,15 +190,23 @@ button:hover {
     background-image: url(images/bac2.jpeg);
     /*background-image: url(images/who-determined-the-speed-of-lights-featured-photo.jpg);*/
     background-size: cover;
-    margin-top: 30px;
-    padding-top: 15px;
+    margin-top: 50px;
     padding-bottom: 15px;
 }
 
 .center {
+    padding-top: 35px;
+    background-color: transparent;
     margin: auto;
-    width: 50%;
+    width: 100%;
     text-align: center;
+}
+
+form, label,select,input{
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    font-family: Comic Sans MS;
 }
 
 .dropdown {
@@ -214,6 +223,7 @@ button:hover {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
+    padding-top: 50px;
 }
 
 .dropdown-content {
