@@ -75,8 +75,16 @@ $result = $db->query("SELECT image FROM images ORDER BY uploaded DESC");
         }
 
         img{
-          width: 400px;
-          height: 200px;
+          margin-left: 10%;
+          width: 100%;
+          
+        }
+        th{
+          width: 25%;
+          padding-left: 7%;
+          color: white;
+          font-family: Comic Sans MS;
+
         }
     </style>
   <div id="main">
@@ -109,12 +117,26 @@ $result = $db->query("SELECT image FROM images ORDER BY uploaded DESC");
         </div>
 
 
-        <table><
-        <?php if($result->num_rows > 0){ ?> 
-    <div class="gallery"><tr><th>
+        <table>
+        <?php 
+        $result = $db->query("SELECT * FROM images ORDER BY uploaded DESC"); 
+
+
+        if($result->num_rows > 0){ 
+      
+            echo "<tr>";
+         
+          ?> 
+    <div class="gallery">
         <?php while($row = $result->fetch_assoc()){ ?> 
-            <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> </th></tr>
-        <?php } ?> 
+           <tr><th><img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['image']); ?>" /> </th><th>Car type: <?php echo $row["cars"]?><br> Year: <?php echo $row["year"]?><br>Model: <?php echo $row["model"]?><br>Mileage less than <?php echo $row["mileage"]?> miles<br>Price: $<?php echo $row["price"]?></th>
+            <?php 
+
+
+
+            echo "<tr>";
+     
+            } ?> 
     </div> 
 <?php }else{ ?> 
     <p class="status error">Image(s) not found...</p> 

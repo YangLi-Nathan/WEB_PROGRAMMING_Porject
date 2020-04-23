@@ -78,7 +78,7 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
         <div id="Search_Section">
             <div class="center">
 
-    <form method="post" action="sell.php" autocomplete="on" class="formLayout"  enctype="multipart/form-data">
+    <form method="post" action="search_result.php" autocomplete="on" class="formLayout"  enctype="multipart/form-data">
     <label>Car Type</label>
           <select id="type" name="cars">
             <option value="used">Used</option>

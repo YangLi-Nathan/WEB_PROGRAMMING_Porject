@@ -37,7 +37,7 @@ if(isset($_POST['admin_login'])){
         }
         else {
         echo '<script>alert("Username and/or Password incorrect.\\nTry again.")
-        location="signup.php";
+        location="login.php";
         </script>';
         
         }

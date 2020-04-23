@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+li,
+a,
+button {
+    font-family: san-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    width: 120px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+.log_in {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.sign_up {
+    position: absolute;
+    top: 30px;
+    right: 90px;
+}
+
+.logout {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+.username_display {
+    position: absolute;
+    top: 30px;
+    right: 180px;
+    color: aliceblue;
+}
+
+#countDowntimer {
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    color: aliceblue;
+}
+
+.nav_bars {
+    list-style: none;
+}
+
+.nav_bars li {
+    padding-left: 50px;
+    display: inline-block;
+}
+
+.nav_bars:hover {
+    color: #87CEFC;
+}
+
+button {
+    font-size: 15px;
+    padding: 9px 25px;
+    border: none;
+    background-color: dimgrey;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+@media (max-width:1000px) {
+    #nav_bar5 {
+        display: none;
+    }
+}
+
+@media (max-width:830px) {
+    #nav_bar4 {
+        display: none;
+    }
+}
+
+@media (max-width:700px) {
+    #nav_bar3 {
+        display: none;
+    }
+}
+
+@media (max-width:550px) {
+    #nav_bar2 {
+        display: none;
+    }
+}
+
+@media (max-width:400px) {
+    .nav_bars {
+        justify-content: center;
+    }
+}
+
+#images_left {
+    width: 25.8%;
+    
+}
+
+#images_right {
+    width: 26.4%;
+    float: right;
+}
+
+#video {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+}
+
+@media(max-width:1000px) {
+    #video {
+        height: 43%;
+        width: auto;
+    }
+}
+
+@media(max-width:850px) {
+    #video {
+        height: 35%;
+        width: auto;
+    }
+}
+
+@media(max-width:700px) {
+    #video {
+        height: 24.5%;
+        width: auto;
+    }
+}
+
+@media(max-width:500px) {
+    #video {
+        height: 20.5%;
+        width: auto;
+    }
+}
+
+@media(max-height:700px) {
+    #video {
+        width: 62%;
+        height: auto;
+    }
+}
+
+@media(max-height:500px) {
+    #video {
+        width: 62%;
+        height: auto;
+    }
+}
+
+#Search_Section {
+    height: 100px;
+    border-style: none;
+    padding: 5px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: url(images/bac2.jpeg);
+    /*background-image: url(images/who-determined-the-speed-of-lights-featured-photo.jpg);*/
+    background-size: cover;
+    margin-top: 50px;
+    padding-bottom: 15px;
+}
+
+.center {
+    padding-top: 35px;
+    background-color: transparent;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+form, label,select,input{
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    font-family: Comic Sans MS;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: darkgrey;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px silver;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: rgb(216, 202, 202);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*news*/
+
+#Inventory {
+    padding-top: 20px;
+}
+
+#I_title {
+    font-size: 18px;
+    color: white;
+    font-style: italic;
+    font-family: Helvetica;
+}
+
+#news {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.im {
+    width: 100%;
+}
+
+@media(max-width:700px) {
+    #im1 {
+        display: none;
+    }
+}
+
+@media(max-width:900px) {
+    #im2 {
+        display: none;
+    }
+}
+
+
+/*social*/
+
+#Social_Media {
+    margin: auto;
+    clear: both;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 70px;
+    width: 55px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px 15px;
+    border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+@media(max-width:800px) {
+    #sm1 {
+        display: none;
+    }
+}
+
+@media(max-width:800px) {
+    #sm2 {
+        display: none;
+    }
+}
+
+@media(max-width:600px) {
+    #sm3 {
+        display: none;
+    }
+}
+
+@media(max-width:400px) {
+    #sm4 {
+        display: none;
+    }
+}
+
+
+/* rolling*/
+
+#news {
+    list-style: none;
+}
+
+#rolling {
+    width: 750px;
+    height: 170px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+#news {
+    width: 200%;
+    animation: picmove 12s linear infinite forwards;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes picmove {
+    from {
+        transform: translate(-0);
+    }
+    to {
+        transform: translate(-800px);
+    }
+}
+
+#news:hover {
+    animation-play-state: paused;
+}
+/* rolling*/
+
+#news {
+    list-style: none;
+}
+
+#rolling {
+    width: 750px;
+    height: 170px;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+#news {
+    width: 200%;
+    animation: picmove 12s linear infinite forwards;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes picmove {
+    from {
+        transform: translate(-0);
+    }
+    to {
+        transform: translate(-800px);
+    }
+}
+
+#news:hover {
+    animation-play-state: paused;
+}
