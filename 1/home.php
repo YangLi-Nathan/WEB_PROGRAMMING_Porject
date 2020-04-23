@@ -78,62 +78,64 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
         <div id="Search_Section">
             <div class="center">
 
-    <form method="post" action="search_result.php" autocomplete="on" class="formLayout"  enctype="multipart/form-data">
-    <label>Car Type</label>
-          <select id="type" name="cars">
-            <option value="used">Used</option>
-            <option value="new">New</option>
-          </select>
+                <form method="post" action="search_result.php" autocomplete="on" class="formLayout"
+                    enctype="multipart/form-data">
+                    <label>Car Type</label>
+                    <select id="type" name="cars">
+                        <option value="used">Used</option>
+                        <option value="new">New</option>
+                    </select>
 
-    <label>Year</label>
-          <select id="type" name="year">
-            <option value="2020">2020</option>
-            <option value="2019">2019</option>
-            <option value="2018">2018</option>
-            <option value="2017">2017</option>
-            <option value="older_2014">Older than 2016</option>
-        
-          </select>
+                    <label>Year</label>
+                    <select id="type" name="year">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="older_2014">Older than 2016</option>
 
- 
+                    </select>
 
-<label>Model </label>
-    <select name="Model" >
 
-  <option value="BMW i8">BMW i8</option>
-  <option value="BMW_m8">BMW M8</option>
-  <option value="BMW_M850">BMW m850</option>
-  <option value="Mercedes ">Mercedes Maybach</option>
-  <option value="Audi_a8">Audi A8</option>
-  <option value="Audi_r8">Audi R8</option>
-  <option value="Bentley Continental GT">Bentley Continental GT</option>
-  <option value="Alfa Romeo 4C">Alfa Romeo 4C</option>
-  <option value="Chevrolet Chevrolet">Chevrolet Chevrolet</option>
-  <option value="Aston Martin DB11">Aston Martin DB11</option>
-  <option value="Aston Martin DBS">Aston Martin DBS</option>
-  
-</select>
 
-<label>Mileage Range </label>
-    <select name="mileage">
+                    <label>Model </label>
+                    <select name="Model">
 
-  <option value="10000"> less than 10,000</option>
-  <option value="30000">10,000-30,000</option>
-  <option value="50000">30,000-50,000</option>
-  <option value="100000">50,000-100,000</option>
-  
-</select>
+                        <option value="BMW i8">BMW i8</option>
+                        <option value="BMW_m8">BMW M8</option>
+                        <option value="BMW_M850">BMW m850</option>
+                        <option value="Mercedes ">Mercedes Maybach</option>
+                        <option value="Audi_a8">Audi A8</option>
+                        <option value="Audi_r8">Audi R8</option>
+                        <option value="Bentley Continental GT">Bentley Continental GT</option>
+                        <option value="Alfa Romeo 4C">Alfa Romeo 4C</option>
+                        <option value="Chevrolet Chevrolet">Chevrolet Chevrolet</option>
+                        <option value="Aston Martin DB11">Aston Martin DB11</option>
+                        <option value="Aston Martin DBS">Aston Martin DBS</option>
 
-<label>Price Limit: </label>
-  <input style="border-color: white;" type="text" name="Price" class="textbox" required step='0.01' pattern="[0-9]+([,\.][0-9]+)?"/>
+                    </select>
 
-  <input id="submit" type="submit" name="submit" value="SEARCH">
-                
-                  
-                </div>
+                    <label>Mileage Range </label>
+                    <select name="mileage">
+
+                        <option value="10000"> less than 10,000</option>
+                        <option value="30000">10,000-30,000</option>
+                        <option value="50000">30,000-50,000</option>
+                        <option value="100000">50,000-100,000</option>
+
+                    </select>
+
+                    <label>Price Limit: </label>
+                    <input style="border-color: white;" type="text" name="Price" class="textbox" required step='0.01'
+                        pattern="[0-9]+([,\.][0-9]+)?" />
+
+                    <input id="submit" type="submit" name="submit" value="SEARCH">
 
 
             </div>
+
+
+        </div>
         </div>
 
         <!--  Inventory Section -->
@@ -168,7 +170,7 @@ if(isset($_SESSION['email']) && !empty($_SESSION['email'])) {
                 <a id="sm2" href="https://www.twitter.com" class="fa fa-twitter"></a>
                 <a id="sm3" href="https://www.google.com" class="fa fa-google"></a>
                 <a id="sm4" href="https://www.linkedin.com" class="fa fa-linkedin"></a>
-                <a id="sm5" href="https://www.youtube.com/watch?v=3HfVNXfMh0E&feature=youtu.be"
+                <a id="sm5" href="https://www.youtube.com/watch?v=t-1ln2ZbJM4&feature=youtu.be"
                     class="fa fa-youtube"></a>
             </div>
     </body>
